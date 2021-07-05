@@ -15,9 +15,9 @@ The second preexisting dataset that our team used was from Abhijeet Bhatikar's [
   
 Some sample images from this dataset are below:  
   
-![](images/abhijeet1.jpg?raw=true)
-![](images/abhijeet2.jpg?raw=true)
-![](images/abhijeet3.jpg?raw=true) 
+![](images/abhijeet1.jpg?raw=true | width=150)
+![](images/abhijeet2.jpg?raw=true | width=150)
+![](images/abhijeet3.jpg?raw=true | width=150) 
 
 ### Self-Generated
 Our team supplemented the two preexisting datasets with a number of package images of our own creation in the environment in which this project will eventually be deployed. We generated these images by doing the following:  
