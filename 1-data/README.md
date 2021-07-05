@@ -6,9 +6,9 @@ The first preexisting dataset that our team used was the open-source, user-gener
   
 Some sample images from this dataset are below:  
 
-<img src="roboflow1.jpg" width="33%"/>
-<img src="roboflow2.jpg" width="33%"/>
-<img src="roboflow3.jpg" width="33%"/> 
+<img src="roboflow1.jpg" width="33%">
+<img src="roboflow2.jpg" width="33%">
+<img src="roboflow3.jpg" width="33%"> 
   
 ### Abhijeet Bhatikar
 The second preexisting dataset that our team used was from Abhijeet Bhatikar's [package-monitor](https://github.com/abhatikar/package-monitor) project Github repository. This dataset consists of over 500 images of packages on doorsteps in a variety of positions, angles, and lighting conditions labeled with a single `package` class in YOLO format.  
