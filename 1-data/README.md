@@ -1,9 +1,15 @@
 # The Data
+The data for this project consists of 800 training images of packages on doorsteps 
 ## Data Sources
 ### Roboflow
 The first preexisting dataset that our team used was the open-source, user-generated Roboflow [Packages Dataset](https://public.roboflow.com/object-detection/packages-dataset). This dataset consists of 26 raw images of packages on doorsteps that have been augmented with the Roboflow toolkit to generate 250 images labeled with a single `package` class in YOLO format. Our team will use this data to obtain a baseline single-class accuracy to inform our goal accuracy for this project.  
   
-Some sample images from this dataset are below:
+Some sample images from this dataset are below:  
+  
+![](images/roboflow1.jpg?raw=true)
+![](images/roboflow2.jpg?raw=true)
+![](images/roboflow3.jpg?raw=true)  
+  
 ### Abhijeet Bhatikar
 The second preexisting dataset that our team used was from Abhijeet Bhatikar's [package-monitor](https://github.com/abhatikar/package-monitor) project Github repository. This dataset consists of over 500 images of packages on doorsteps in a variety of positions, angles, and lighting conditions labeled with a single `package` class in YOLO format.  
   
