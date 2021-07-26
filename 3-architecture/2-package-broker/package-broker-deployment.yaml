@@ -14,5 +14,7 @@ spec:
     spec:
       containers:
       - name: mosquitto
-        image: johnmandrus/package-broker:latest
+        image: jkumariucb/package-broker:v1
         ports:
+        - containerPort: 1883
+

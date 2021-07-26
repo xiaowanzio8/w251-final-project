@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: package-logger
-  replicas: 1
+  replicas: 1 # tells deployment to run 1 pods matching the template
   template:
     metadata:
       labels:
@@ -14,5 +14,4 @@ spec:
     spec:
       containers:
       - name: package-logger
-        image: johnmandrus/package-logger:latest
-        ports:
+        image: jkumariucb/package-logger:v1

@@ -1,24 +1,27 @@
-#Image Name: johnmandrus/package-detector
+# Start FROM Nvidia PyTorch image https://ngc.nvidia.com/catalog/containers/nvidia:l4t-pytorch
 
-#Create an ubuntu image
-FROM ubuntu
-ENV DEBIAN_FRONTEND=noninteractive
+FROM nvcr.io/nvidia/l4t-pytorch:r32.5.0-pth1.7-py3
 
-#Update the base image
-RUN apt-get update && apt-get -y update
+# Install linux packages
+RUN apt update && apt install -y zip htop screen libgl1-mesa-glx python3-opencv
 
-#Install python and opencv
-RUN apt-get install -y python3-pip python3-opencv curl mosquitto-clients
+# Install python dependencies
+COPY requirements.txt .
+RUN python3 -m pip install --upgrade pip
+RUN pip3 install --no-cache -r requirements.txt coremltools gsutil 
+RUN pip3 install paho-mqtt
+RUN pip3 install --no-cache -U torch torchvision
 
-#Install packages
-RUN pip install paho-mqtt
-RUN pip3 install Cython
-RUN pip3 install numpy
+# Create working directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
-#Set the working directory
-WORKDIR /app
+# Copy contents
+COPY . /usr/src/app
+
+# Set environment variables
+ENV HOME=/usr/src/app
+
+CMD ["python3","package-detector.py"]
 
 
-#Copy and run package-detector.py + haar classifier
-COPY package-detector.py package-detector.py
-CMD ["python3", "package-detector.py"]
