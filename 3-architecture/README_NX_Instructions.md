@@ -3,35 +3,50 @@
 
 **There are 3 containers for NX:**
 
-1) package-detector 
+1) **package-detector** 
+    
     jkumariucb/package-detector:v1 - https://hub.docker.com/repository/docker/jkumariucb/package-detector
+    
     Includes:
-    a) trained model with weights.
+    
+    a) trained model with weights
+    
     b) package-detector.py and other util files/directories
-    c) Dockerfile
+    
+    c) Dockerfile 
+    
     b) package-detector-deployment.yaml
 
 
-2) package-broker
+2) **package-broker**
+    
     jkumariucb/package-broker:v1 - https://hub.docker.com/repository/docker/jkumariucb/package-broker
+    
     Includes:
+    
     a) Dockerfile
+    
     b) package-broker-deployment.yaml
+    
     c) package-broker-service.yaml (*created a service, to access the broker from outside Kubernetes and then from inside it*)
 
 
-3) package-logger
+3) **package-logger**
+    
     jkumariucb/package-logger:v1 - https://hub.docker.com/repository/docker/jkumariucb/package-logger
+    
     Includes:
+    
     a) Dockerfile
+    
     b) package-logger-deployment.yaml
+    
     c) package-logger.py
 
-Following changes have been made to adapt trained yolov5s model onto Jeston device
+***Following changes have been made to adapt trained yolov5s model onto Jeston device***
 
 **Step 1. Adapt Dockerfile from Yolov5s default model for NX**
 
-	- Retrained yolov5 model on Nx with 3 classes : ['box', 'envelope', 'plastic_bag']
 	- Added new base image in the DockerFile
 	- Added new packages to be added to new container: refer to <Dockerfile> for all the packages
 
@@ -46,7 +61,7 @@ Following changes have been made to adapt trained yolov5s model onto Jeston devi
 			- changed default input from folder to webcam
 			- changed default confidence threshold from 0.25 to 0.5 in order to show only high confidence detections.
 
-Please find the complete set of steps below to configure NX:
+***Please find the complete set of steps below to configure NX:***
 
 ## INSTRUCTIONS FOR CONFIGURING NX:
 
