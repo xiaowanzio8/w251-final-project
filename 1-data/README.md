@@ -34,9 +34,22 @@ We detemined early on that we wanted our model to have the ability to differenti
 | `plastic_bag`   | Any soft plastic wrapping that does not hold its own shape and roughly assumes the shape of its contects        |
 | `envelope`   | Any flat, rectangular packaging made of thick paper or thin cardboard with a single defined opening that is only designed to transport paper, thin books, or other flat objects.        |
 
-## Annotations
+## Annotation
 All images were labeled using [makesense.ai](https://www.makesense.ai/), a freely available image annotation tool for object detection. Our team divided up the training images, labeled them, and exported the annotations in YOLOv5 format.
 
 An example of an annotated image is below:  
   
 ![](images/annotations.png?raw=true)
+
+## Augmentation
+The dataset was augmented with a simple python script using the albumentations package in order to make the model more resistant to diverse lighting, motion, and weather conditions. The repository file data-aug.py reads all image files in a training directory, augments them with one of three transformation functions, and saves them to a new directory with a new corresponding annotation file in YOLOv5 format. For this project, we used data augmentation to generate a 10x increase in the number of example images in our training dataset.  
+
+| Category| Transformation|
+| ----------- | ----------- |
+| Lighting      | RGBShift \ RandomBrightnessContrast       |
+| Motion   | MotionBlur        |
+| Weather | RandomFog \ RandomRain \ RandomSnow \ RandomSunFlare        |  
+  
+Some examples of augmented images are below:  
+  
+![](images/aug-examples.png?raw=true)
