@@ -24,6 +24,7 @@ Model training details and metrics are available at:
 - [Container 2 - package-broker](https://github.com/johnmandrus/w251-final-project/tree/main/3-architecture/2-package-broker)
 - [Container 3 - package-logger](https://github.com/johnmandrus/w251-final-project/tree/main/3-architecture/3-package-logger)
 - [Inference](https://github.com/johnmandrus/w251-final-project/tree/main/3-architecture/inference)
+- [Readme_NX_Instructions](https://github.com/johnmandrus/w251-final-project/blob/main/3-architecture/README_NX_Instructions.md)
 
 ## Reports
 - [Reports and Presentation](https://github.com/johnmandrus/w251-final-project/tree/main/4-report-and-presentation)
